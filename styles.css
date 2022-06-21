@@ -1,0 +1,28 @@
+.heading {
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #flex-parent{
+    align-self: center;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+ .form, .fname{
+  align-self: center;
+  display: flex;
+}
+
+#userInput{
+  width: 35px;
+}
+
+.button{
+  display:inline-flex;
+}
+
+#userAnswer{
+  border: none;
+}
+
