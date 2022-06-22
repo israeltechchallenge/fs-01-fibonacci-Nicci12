@@ -1,11 +1,10 @@
-function calculate(x){
-  if (x < 2){
-    return 1;
-  } else {
-    return calculate(x - 2) + calculate(x - 1);
+function fibServer(num) {
+  fetch(`http://localhost:5050/fibonacci/${num}`)
+  .then((response) => response.json())
+    .then(data => {
+      document.getElementById("result").innerHTML = data["result"]
+    });
   }
-}
-
-function myFunction(){
-document.getElementById('userAnswer').value=calculate(document.getElementById('userInput').value);
-}
+  function fib() {
+  fibServer(document.getElementById("num").value)
+  }

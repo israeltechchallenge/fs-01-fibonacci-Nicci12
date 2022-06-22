@@ -4,25 +4,13 @@
   }
 
   #flex-parent{
-    align-self: center;
+    align-items: center;
     margin-top: 20px;
     margin-left: 80px;
+    display: flex;
   }
 
- .form, .fname{
-  align-self: center;
-  display: flex;
+#num{
+  width: 45px;
+  margin-left: 10px;
 }
-
-#userInput{
-  width: 35px;
-}
-
-.button{
-  display:inline-flex;
-}
-
-#userAnswer{
-  border: none;
-}
-

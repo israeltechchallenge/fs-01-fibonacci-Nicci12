@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,13 +25,14 @@
   <div><h1 class="heading"> Fibonacci Calculator</h1></div>
     
   <div id="flex-parent">
-    <form class = "form" action="/action_page.php" method="get">
-      The Fibonacci Of:<input type="number" name="Input" value="" id="userInput" />
-      <button type="button" class="btn btn-primary btn-sm" onclick="myFunction()"> is</button>
-      <input type="number" name="Answer" id="userAnswer" />
-    </form>
+         The Fibonacci Of:<input min="0" type="number" name="Input" value="" id="num"/>
+      <button type="button" class="btn btn-primary btn-sm" onclick="fib()"> is</button>
+      <div id="result">
+        <em></em>
+      </div>
+
   </div>
-  </div>
-  <script src="./java.js"></script>
+
+  <script src="java.js"></script>
 </body>
 </html>
