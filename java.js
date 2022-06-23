@@ -52,8 +52,7 @@ btn.addEventListener("click", function () {
     error.classList.remove("error");
     error.classList.remove("errMessage");
     number.style.color = "black";
-    removeLoader();
     fibServer(document.getElementById("num").value);
-    error.innerText = " ";
+    errMessage.innerText = " ";
   }
 });
