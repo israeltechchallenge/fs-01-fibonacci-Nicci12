@@ -1,26 +1,25 @@
 .heading {
-    margin-left: 5%;
-    margin-top: 5%;
-  }
+  margin-left: 5%;
+  margin-top: 5%;
+}
 
-  #flex-parent{
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 80px;
-    display: flex;
-  }
+#flex-parent {
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 80px;
+  display: flex;
+}
 
-#num{
+#num {
   margin-left: 10px;
   width: 86px;
 }
 
-
-.hide-loader{
-  display :none;
+.hide-loader {
+  display: none;
 }
 
-.errMessage{
+.errMessage {
   position: absolute;
   color: #A94442;
   background-color: #F2DEDE;
