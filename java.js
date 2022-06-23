@@ -61,12 +61,12 @@ const results = document.getElementById("results");
 let myUrl = `http://localhost:5050/getFibonacciResults`;
 
 
-function fibResults(myUrl){
-  fetch(myUrl)
-  .then((response) => response.json())
-  .then(myUrl=> { 
-    JSON.stringify(myUrl)
-  });
-}
+// function fibResults(myUrl){
+//   fetch(myUrl)
+//   .then((response) => response.json())
+//   .then(data=> { 
+//     JSON.stringify(data)
+//   });
+// }
 
-console.log(JSON.stringify(myUrl));
+// console.log(JSON.stringify(myUrl));
