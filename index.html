@@ -25,11 +25,20 @@
   <div><h1 class="heading"> Fibonacci Calculator</h1></div>
     
   <div id="flex-parent">
-         The Fibonacci Of:<input min="0" type="number" name="Input" value="" id="num"/>
-      <button type="button" class="btn btn-primary btn-sm" onclick="fib()"> is</button>
-      <div id="result">
-        <em></em>
-      </div>
+
+       <div>The Fibonacci Of: </div>
+      <div id="input"><input min="0" type="number" name="Input" value="" id="num"/></div>  
+      <button type="button" id="btn" class="btn btn-primary btn-sm error"> is</button>
+      <div id="loader" class="loader hide-loader">
+        <div class="spinner-border" role="status"> </div>
+      </div>  
+      <div id="result"></div> 
+
+       <div id="error"> 
+        <div id="errMessage">
+         </div>
+        </div>
+       
 
   </div>
 
