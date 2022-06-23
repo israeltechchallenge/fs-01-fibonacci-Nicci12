@@ -57,21 +57,16 @@ btn.addEventListener("click", function () {
   }
 });
 
-// const results = document.getElementById("results");
-// let myUrl = `http://localhost:5050/getFibonacciResults`;
+const results = document.getElementById("results");
+let myUrl = `http://localhost:5050/getFibonacciResults`;
 
-// function fibResults(myUrl){
-//   fetch(myUrl)
-//   .then((response) => {
-//     if (!response.ok) {
 
-//       response.JSON
-//       // document.getElementById("result").innerHTML = myUrl["result"];
-//       }
-//     return response.json();
-//     })
-//   }
+function fibResults(myUrl){
+  fetch(myUrl)
+  .then((response) => response.json())
+  .then(myUrl=> { 
+    JSON.stringify(myUrl)
+  });
+}
 
-  
-// console.log(myUrl);
-
+console.log(JSON.stringify(myUrl));
