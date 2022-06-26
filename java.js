@@ -53,20 +53,45 @@ btn.addEventListener("click", function () {
     error.classList.remove("errMessage");
     number.style.color = "black";
     fibServer(document.getElementById("num").value);
-    errMessage.innerText = " ";
+    addLoader();
+    getUsers(printUserToList);
+    fibServer(document.getElementById("num").value);
+    removeLoader();
   }
 });
 
-const results = document.getElementById("results");
-let myUrl = `http://localhost:5050/getFibonacciResults`;
+const url= `http://localhost:5050/getFibonacciResults`;
 
 
-// function fibResults(myUrl){
-//   fetch(myUrl)
-//   .then((response) => response.json())
-//   .then(data=> { 
-//     JSON.stringify(data)
-//   });
-// }
 
-// console.log(JSON.stringify(myUrl));
+function getUsers(onSuccess) {
+    console.log('on success callback', onSuccess);
+
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            onSuccess(data);
+
+        })
+
+
+}
+
+
+    const usersListEle = document.getElementById('list');
+
+    function printUserToList(data) {
+    for (let i  of data.results 
+       .sort((a,b) => b["createdDate"]- a["createdDate"])
+       .slice(0,5))
+       
+       {
+       let date = new Date(i["createdDate"]);
+        document.createElement("li");
+        usersListEle.innerHTML +=  `<li>The Fibonacci of <b>${i["number"]}</b> is <b>${i["result"]}</b> Caculated at ${date} <li/>`;
+        usersListEle.appendChild("li");
+    }
+    document.getElementById("fullResults").appendChild(usersListEle)
+}
+

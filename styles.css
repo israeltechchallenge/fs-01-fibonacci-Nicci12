@@ -30,3 +30,16 @@
   margin-left: 40px;
 }
 
+#myResults{
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 80px;
+  display: flex;
+}
+
+.check{
+  position: relative;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 80px
+}
