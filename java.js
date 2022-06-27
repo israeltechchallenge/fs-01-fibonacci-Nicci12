@@ -24,7 +24,7 @@ console.log(checkbox);
       const row = document.createElement(`div`);
       row.innerHTML = `The Fibonacci Of: <b>${array[i].number}</b> is <b>${array[i].result}</b>. Calculated at: ${new Date(array[i].createdDate)}`;
       list.append(row);
-      row.classList.add("fs-5", "border-bottom", "py-2", "border-secondary");
+      row.classList.add("fs-5", "border-bottom", "py-2", "border-secondary" );
     }
     resultsList.append(list);
   
@@ -57,24 +57,20 @@ function handleClick() {
     error.classList.remove("error");
     number.style.color = "red";
     errMessage.innerText = "Can't be larger than 50";
-  } else if (num.value == 42) {
-    error.classList.add("error");
-    error.classList.remove("errMessage");
-    number.style.color = "black";
-    errMessage.innerText = "server error: 42 is the meaning of life";
-    fibServer(document.getElementById("num").value);
+  } else if (check.checked === false){
     addLoader();
-  } else if(check.checked === false){
-      console.log("it worked")
-      getList();
-  }
-  else {
+    fibonacci();
+  } else if(check.checked === true){
+    addLoader();
+    fibServer(document.getElementById("num").value);
+    getList();
+    console.log("dont add")
+  }  else {
     error.classList.remove("error");
     error.classList.remove("errMessage");
     number.style.color = "black";
     addLoader();
     fibServer(document.getElementById("num").value);
-  
   }
 }
 
@@ -112,10 +108,6 @@ function removeLoader() {
 }
 
 ///////////////////main scope
-
-
-
-
 
 
 // getUsers(printUserToList);
