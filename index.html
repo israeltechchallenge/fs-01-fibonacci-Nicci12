@@ -34,22 +34,22 @@
   </head>
 
   <body>
-    <div>
-      <h1 class="heading">Fibonacci Calculator</h1>
+    <div class="heading">
+      <h1>Fibonacci Calculator</h1>
     </div>
 
     <div id="flex-parent">
       <div><h4>The Fibonacci Of:</h4></div>
       <div id="input">
-        <input min="0" type="text" name="Input" value="" id="num" />
+      <input min="0" type="text" name="Input" value="" id="num" />
       </div>
       <button type="button" id="btn" class="btn btn-primary btn-sm error">
         is
       </button>
-      <div id="loader" class="loader hide-loader">
+      <div id="loader" class="d-none">
         <div class="spinner-border" role="status"></div>
       </div>
-      <div id="result"></div>
+      <b><u><div id="result"></div></u></b>
 
       <div id="error">
         <div id="errMessage"></div>
@@ -62,7 +62,13 @@
     </div>
 
     <div id="myResults">
-      <h2>Results</h2>
+      <h2 style="margin-top: 20px;">Results</h2>
+      <div id="spinner" class="d-none">
+      <div class="spinner-border" role="status"><div>
+      </div>
+      </div>
+      
+      </div>
     </div>
 
     <div id="fullResults">

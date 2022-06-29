@@ -1,3 +1,5 @@
+/////////////main scope
+
 const input = document.getElementById("input");
 const btn = document.getElementById("btn");
 const number = document.getElementById("num");
@@ -5,7 +7,7 @@ document.getElementById("error").style.color = "red";
 const resultsList = document.getElementById(`fullResults`);
 const checkbox = document.getElementById("check");
 const result = document.getElementById("result");
-console.log(checkbox);
+
   ///////////////////////////best getList function
   
   async function getList() {
@@ -21,8 +23,8 @@ console.log(checkbox);
     const list = document.createElement(`div`);
     for(let i=0; i<array.length;i++)
     {
-      const row = document.createElement(`div`);
-      row.innerHTML = `The Fibonacci Of: <b>${array[i].number}</b> is <b>${array[i].result}</b>. Calculated at: ${new Date(array[i].createdDate)}`;
+      const row= document.createElement(`div`);
+       row.innerHTML = `The Fibonacci Of: <b>${array[i].number}</b> is <b>${array[i].result}</b>. Calculated at: ${new Date(array[i].createdDate)}`;
       list.append(row);
       row.classList.add("fs-5", "border-bottom", "py-2", "border-secondary" );
     }
@@ -30,8 +32,7 @@ console.log(checkbox);
   
   }
 
-
-// /////////////////////////////// checkbox check function
+// ///////////////////////////// checkbox check function
 function fibonacci(){
   let x = document.getElementById("num").value;
   let m = 0;
@@ -64,8 +65,8 @@ function handleClick() {
     addLoader();
     fibServer(document.getElementById("num").value);
     getList();
-    console.log("dont add")
   }  else {
+    removeSpinner();
     error.classList.remove("error");
     error.classList.remove("errMessage");
     number.style.color = "black";
@@ -100,11 +101,13 @@ function fibServer(num) {
 //////////////////spinner functions
 
 function addLoader() {
-  $("#loader").addClass("hide-loader");
+  $("#loader").addClass("d-none");
+  $("#spinner").addClass("d-none");
 }
 
 function removeLoader() {
-  $("#loader").removeClass("hide-loader");
+  $("#loader").removeClass("d-none");
+  $("#spinner").removeClass("d-none");
 }
 
 ///////////////////main scope

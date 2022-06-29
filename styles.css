@@ -1,22 +1,18 @@
-.heading {
-  margin-left: 5%;
-  margin-top: 5%;
+*{
+  box-sizing: border-box;
 }
 
-#flex-parent {
+.heading, #flex-parent, #myResults,
+#fullResults {
   align-items: center;
-  margin-top: 20px;
-  margin-left: 80px;
+  margin: 20px 0 20px 50px;
   display: flex;
 }
 
-#num {
-  margin-left: 10px;
-  width: 86px;
-}
-
-.hide-loader {
-  display: none;
+#num,
+#result {
+margin-left: 10px;
+width: 86px;
 }
 
 .errMessage {
@@ -30,16 +26,9 @@
   margin-left: 40px;
 }
 
-#myResults, #fullResults{
-  align-items: center;
-  margin-top: 20px;
-  margin-left: 80px;
-  display: flex;
-}
-
-.check{
+.check {
   position: relative;
   align-items: center;
   margin-top: 20px;
-  margin-left: 80px
+  margin-left: 50px
 }
