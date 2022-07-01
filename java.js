@@ -58,20 +58,25 @@ function handleClick() {
     error.classList.remove("error");
     number.style.color = "red";
     errMessage.innerText = "Can't be larger than 50";
+    error.classList.remove("errMessage");
   } else if (check.checked === false){
+    number.style.color = "black";
+    error.classList.remove("errMessage");
+    error.classList.remove("error");
     addLoader();
     fibonacci();
   } else if(check.checked === true){
+    number.style.color = "black";
     addLoader();
     fibServer(document.getElementById("num").value);
     getList();
   }  else {
     removeSpinner();
-    error.classList.remove("error");
-    error.classList.remove("errMessage");
     number.style.color = "black";
     addLoader();
     fibServer(document.getElementById("num").value);
+    error.classList.remove("errMessage");
+    error.classList.remove("error");
   }
 }
 
