@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+}
+
+.heading, #flex-parent, #myResults,
+#fullResults {
+  align-items: center;
+  margin: 20px 0 20px 50px;
+  display: flex;
+}
+
+#num,
+#result {
+margin-left: 10px;
+width: 86px;
+}
+
+.errMessage {
+  position: absolute;
+  color: #A94442;
+  background-color: #F2DEDE;
+  border: 1px solid #EBCCCC;
+  width: 180px;
+  height: 33px;
+  margin: 90px 0 0 140px;
+}
+
+.check {
+  position: relative;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px
+}
